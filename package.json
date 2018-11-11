@@ -1,0 +1,26 @@
+{
+  "name": "db2_on_node",
+  "version": "1.0.0",
+  "description": "db2 + js ?",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/redha1419/db2_on_node.git"
+  },
+  "keywords": [
+    "db2"
+  ],
+  "author": "Reza Shahriari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/redha1419/db2_on_node/issues"
+  },
+  "homepage": "https://github.com/redha1419/db2_on_node#readme",
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4"
+  }
+}
