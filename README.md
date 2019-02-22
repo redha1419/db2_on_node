@@ -11,7 +11,7 @@ This can be great for a quick websie that need to manage users with no authentif
 
 ## ROUTES ##
 
-- The only current route is `hostname:port/db2/connect`. this connect to your db adn queries a dummy table
+- The only current route is `hostname:port/db2/connect`. This connects to your db and queries a dummy table
 
 ## HOW TO USE ##
 
