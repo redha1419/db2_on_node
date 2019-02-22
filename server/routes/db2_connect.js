@@ -2,7 +2,8 @@ const express = require('express');
 const router = new express.Router();
 const db2 = require('ibm_db');
 require('dotenv').config();
-const ibmStr = "DATABASE=" + process.env.DB_NAME + ";HOSTNAME=" + process.env.HOSTNAME + ";PORT=" + process.env.PORT+ ";PROTOCOL=" + process.env.PROTOCAL + ";UID=" + process.env.UID + ";PWD=" + process.env.PWD;
+const ibmStr = "DATABASE=" + process.env.DB_NAME + ";HOSTNAME=" + process.env.HOSTNAME + ";PORT=" + process.env.PORT+ ";PROTOCOL=" + process.env.PROTOCOL + ";UID=" + process.env.UID + ";PWD=" + process.env.PASSWD;
+console.log(ibmStr);
 
 
 // for now we have our dummy post, just a connect to db and a quick select statement
