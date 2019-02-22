@@ -7,3 +7,14 @@
   2. connecting and adding, removing and modifying that table.
   
 This can be great for a quick websie that need to manage users with no authentification (for now).
+
+
+## ROUTES ##
+
+- The only current route is `hostname:port/db2/connect`. this connect to your db adn queries a dummy table
+
+## HOW TO USE ##
+
+1. have a db2 instance up (this git repo will have scripts to this eventually)
+2. set the `.env` file in this repo with the proper db credentials
+3. `npm start`
