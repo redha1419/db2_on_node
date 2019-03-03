@@ -6,7 +6,7 @@
   1. a sample db with 1 table (Users).
   2. connecting and adding, removing and modifying that table.
   
-This can be great for a quick websie that need to manage users with no authentification (for now).
+This can be great for a quick website that need to manage users with no authentification (for now).
 
 
 ## ROUTES ##
