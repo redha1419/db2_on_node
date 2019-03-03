@@ -11,7 +11,7 @@ This can be great for a quick website that need to manage users with no authenti
 
 ## ROUTES ##
 
-- `hostname:port/db2/connect`: This connects to your db and queries a dummy table
+- `hostname:port/db2/connect`: This connects to your db and queries a dummy table; to make sure everything is setup correctly
 - `hostname:port/db2/init`: creates a table for storing users -> fist name, last name, email
 - `hostname:port/users/add`: add a new user
 - `hostname:port/users/remove`: remove a user (by email address)
