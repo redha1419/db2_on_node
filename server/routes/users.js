@@ -12,7 +12,7 @@ router.post('/add', function(req, res) {
       console.log(err);
       return;
     }
-    
+
     const insert_stmt = "INSERT INTO users (first_name, last_name, email)";
 
     const first_name = req.body.first_name;
@@ -23,10 +23,10 @@ router.post('/add', function(req, res) {
 
     connection.query(insert_stmt + insert_values, function (err1, rows) {
       if (err1){
-        console.log(err1);
+        res.json({result: err1});
+        res.status(400);
       }
       else{
-        //console.log(rows); for debugging
         res.json({result: rows});
         res.status(200);
       }
