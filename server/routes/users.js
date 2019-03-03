@@ -19,9 +19,9 @@ router.post('/add', function(req, res) {
     const last_name = req.body.last_name;
     const email = req.body.email;
 
-    const insert_values = " VALUES ('" + first_name + "','" + last_name + "','" + email + "');"
+    const insert_vals = " VALUES ('" + first_name + "','" + last_name + "','" + email + "');"
 
-    connection.query(insert_stmt + insert_values, function (err1, rows) {
+    connection.query(insert_stmt + insert_vals, function (err1, rows) {
       if (err1){
         res.json({result: err1});
         res.status(400);
@@ -40,29 +40,37 @@ router.post('/add', function(req, res) {
 });
 
 
+// for now we have our dummy post, just a connect to db and a quick select statement
 router.post('/remove', function(req, res) {	
-  db2.open(ibmStr, function (err, connection) {
-    if (err){
-      console.log(err);
-      return;
-    }
-    connection.query("", function (err1, rows) {
-      if (err1){
-        console.log(err1);
+    db2.open(ibmStr, function (err, connection) {
+      if (err){
+        console.log(err);
+        return;
       }
-      else{
-        console.log(rows); // for debugging
-        res.json({result: rows});
-        res.status(200);
-      }
-      connection.close(function(err2) {
-        if(err2){
-	        console.log(err2);
-      	}
+
+      const delete_stmt = "DELETE FROM users";
+  
+      const email = req.body.email;
+  
+      const delete_vals = " WHERE EMAIL = '" + email + "';";
+  
+      connection.query(delete_stmt + delete_vals, function (err1, rows) {
+        if (err1){
+          res.json({result: err1});
+          res.status(400);
+        }
+        else{
+          res.json({result: rows});
+          res.status(200);
+        }
+        connection.close(function(err2) {
+          if(err2){
+              console.log(err2);
+            }
+        });
       });
     });
   });
-});
 
 router.post('/edit', function(req, res) {	
     db2.open(ibmStr, function (err, connection) {
