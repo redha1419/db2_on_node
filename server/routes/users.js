@@ -5,7 +5,6 @@ require('dotenv').config();
 const ibmStr = "DATABASE=" + process.env.DB_NAME + ";HOSTNAME=" + process.env.HOSTNAME + ";PORT=" + process.env.PORT+ ";PROTOCOL=" + process.env.PROTOCOL + ";UID=" + process.env.UID + ";PWD=" + process.env.PASSWD;
 
 
-// for now we have our dummy post, just a connect to db and a quick select statement
 router.post('/add', function(req, res) {	
   db2.open(ibmStr, function (err, connection) {
     if (err){
@@ -39,8 +38,6 @@ router.post('/add', function(req, res) {
   });
 });
 
-
-// for now we have our dummy post, just a connect to db and a quick select statement
 router.post('/remove', function(req, res) {	
     db2.open(ibmStr, function (err, connection) {
       if (err){
